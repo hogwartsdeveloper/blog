@@ -54,7 +54,7 @@ public class BlogController {
     @GetMapping("/blog/{id}/edit")
     public String blogEdit(@PathVariable(value = "id") long id, Model model) {
         if (!postRepository.existsById(id)) {
-            return "redirect:/blog";
+            return "redirect:/";
         }
 
         Optional<Post> post = postRepository.findById(id);
@@ -72,7 +72,7 @@ public class BlogController {
         post.setFull_text(full_text);
         postRepository.save(post);
 
-        return "redirect:/blog";
+        return "redirect:/";
     }
 
     @PostMapping("/blog/{id}/remove")
