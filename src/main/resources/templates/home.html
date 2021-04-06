@@ -32,6 +32,9 @@
                                     <div class="btn-group">
                                         <a th:href="'/blog/' + ${el.id}" class="btn btn-sm btn-outline-secondary">View</a>
                                         <a th:href="'/blog/' + ${el.id} + '/edit'" class="btn btn-sm btn-outline-secondary">Edit</a>
+                                        <form th:action="'/blog/' + ${el.id} + '/remove'" method="post">
+                                            <button class="btn btn-sm btn-outline-secondary" type="submit">Delete</button>
+                                        </form>
                                     </div>
                                 </div>
                             </div>

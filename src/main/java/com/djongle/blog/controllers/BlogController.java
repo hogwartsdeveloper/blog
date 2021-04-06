@@ -80,6 +80,6 @@ public class BlogController {
         Post post = postRepository.findById(id).orElseThrow(IllegalStateException::new);
         postRepository.delete(post);
 
-        return "redirect:/blog";
+        return "redirect:/";
     }
 }
